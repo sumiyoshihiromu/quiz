@@ -1,0 +1,116 @@
+body {
+    background: rgb(230, 142, 142);
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 6px;
+    padding: 16px;
+    position: relative;
+}
+
+#question {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+#choices {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+#choices > li {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+#choices > li:hover {
+    background: rgb(231, 129, 129);
+}
+
+#choices > li.correct {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    font-weight: bold;
+}
+
+
+#choices > li.correct::after {
+    content: '      正解！';
+}
+
+#choices > li.wrong {
+    background: #f8d8da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    font-weight: bold;
+}
+
+#choices > li.wrong::after {
+    content: '      不正解！';
+}
+
+#btn, #result > a {
+    background: rgb(95, 114, 221);
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 0 rgb(62, 46, 211);
+}
+
+#btn.disabled {
+    background: #ccc;
+    box-shadow: 0 4px 0 #bbb;
+    opacity: 0.5;
+}
+
+#btn:active {
+    position: relative;
+    top: 4px;
+    box-shadow: none;
+}
+
+#result {
+    position: absolute;
+    width: 300px;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 6px;
+    text-align: center;
+    transition: 0.6s;
+}
+
+#result.hidden {
+    transform: translateY(-500px);
+}
+
+#result > p {
+    font-size: 24px;
+}
+
+#result > a {
+    display: block;
+    text-decoration: none;
+}
+
+#result > a:active {
+    position: relative;
+    top: 4px;
+    box-shadow: none;
+}
